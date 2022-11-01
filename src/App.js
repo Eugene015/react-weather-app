@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { bgSetter } from "./utils/bg_setter";
 
 function App() {
   const [data, setData] = useState({});
@@ -18,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className={`app ${bgSetter()}`}>
       <div className="search">
         <input
           value={location}
